@@ -6,7 +6,7 @@
 }
 
 .explore-menu-list-item .active{
-    border:5px solid tomato;
+    border:5px solid rgb(11, 175, 11);
     padding:2px;
 }
 
@@ -32,3 +32,4 @@ cursor: pointer;
     background-color: #747474;
     border:none;
 }
+

@@ -50,7 +50,7 @@ export const categories = [
     icon: burger,
   },
   {
-    category: "Cakes",
+    category: "Cake",
     icon: cakes,
   },
   {
