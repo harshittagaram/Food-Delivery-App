@@ -40,7 +40,7 @@ const FoodItem = ({name,description,id, imageUrl,price}) => {
           </div>
         </Link>
         <div className="card-footer d-flex justify-content-between bg-light ">
-          <Link className="btn btn-success btn-sm" to={`/food/${id}`}>
+          <Link className="btn btn-primary btn-sm" to={`/food/${id}`}>
             View Food
           </Link>
           {quantities[id]>0 ?(

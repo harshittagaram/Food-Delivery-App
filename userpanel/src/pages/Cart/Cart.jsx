@@ -1,20 +1,19 @@
 import{ React , useContext} from 'react'
 import '../Cart/Cart.css';
 import { StoreContext } from '../../context/StoreContext';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
+import { calculateCartTotals } from "../../util/cartUtils";
+
 
 const Cart = () => {
+
+    const navigate = useNavigate();
 
     const {foodList, increaseQty, decreaseQty,quantities,removeFromCart} = useContext(StoreContext);
     const cartItems = foodList.filter(food => quantities[food.id]>0);
 
-    const subtotal = cartItems.reduce((acc, food) => acc + food.price * quantities[food.id], 0);
-
-    const shipping = subtotal === 0? 0.00:10;
-    const tax = subtotal *0.1;
-    const grandTotal = subtotal + shipping + tax;
-    const totalItems = cartItems.reduce((acc, food) => acc + quantities[food.id], 0);
-
+    const{subtotal,shipping,tax,grandTotal,totalItems}= calculateCartTotals(cartItems,quantities);
+    
     
 
   return (
@@ -57,6 +56,7 @@ const Cart = () => {
                                 <div className="col-md-1">
                                     <i className="bi bi-trash remove-btn" onClick={()=>{removeFromCart(food.id)}}></i>
                                 </div>
+                                <hr />
                             </div>
                            ))}
                         </div>
@@ -99,7 +99,7 @@ const Cart = () => {
                             </div>
                         </div>
 
-                        <button className="btn btn-primary checkout-btn w-100 mb-3" disabled={cartItems.length === 0}>
+                        <button className="btn btn-primary checkout-btn w-100 mb-3" disabled={cartItems.length === 0} onClick={()=>navigate("/order")}>
                             Proceed to Checkout
                         </button>
                         
