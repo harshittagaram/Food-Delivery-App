@@ -18,6 +18,10 @@ import tacos from "./tacos.webp";
 import biryani from "./biryani.webp";
 import cakes from "./cakes.webp";
 import rolls from "./rolls.webp";
+import user_icon from "./user_icon.jpg";
+import user_green from "./user_green.png";
+
+
 
 
 
@@ -37,7 +41,9 @@ export const assets = {
   pizza,
   pasta,
   icecream,
-  saladwebp
+  saladwebp,
+  user_icon,
+  user_green
 };
 
 export const categories = [

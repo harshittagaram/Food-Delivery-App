@@ -1,3 +1,7 @@
 .active{
     color:  #198754 !important;
 }
+
+.dropdown-menu li{
+    cursor: pointer;
+}
