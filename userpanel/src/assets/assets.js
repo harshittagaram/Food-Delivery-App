@@ -6,21 +6,22 @@ import deliveryboy from "./deliveryboy.jpg";
 import deliveryboy2 from "./deliveryboy2.jpg";
 import cart from "./cart.jpg";
 import fries from "./fries.webp";
-import burger from "./burger.webp";
+import burger from "./burger.avif";
 import chicken from "./chicken.jpg";
 import icecream from "./icecream.webp";
 import pasta from "./pasta.webp";
-import pizza from "./pizza.jpg";
+import pizza from "./pizza.avif";
 import salad from "./salad.jpg";
 import saladwebp from "./saladwebp.webp";
 import sushi from "./sushi.webp";
 import tacos from "./tacos.webp";
-import biryani from "./biryani.webp";
-import cakes from "./cakes.webp";
-import rolls from "./rolls.webp";
+import biryani from "./biryani.avif";
+import desserts from "./cakes.avif";
+import rolls from "./rolls.jpg";
 import user_icon from "./user_icon.jpg";
 import user_green from "./user_green.png";
-
+import bg from "./bg.jpg";
+import beverages from "./beverages.jpg";
 
 
 
@@ -43,7 +44,10 @@ export const assets = {
   icecream,
   saladwebp,
   user_icon,
-  user_green
+  user_green,
+  bg,
+  beverages,
+  desserts
 };
 
 export const categories = [
@@ -56,8 +60,8 @@ export const categories = [
     icon: burger,
   },
   {
-    category: "Cake",
-    icon: cakes,
+    category: "Dessert",
+    icon: desserts,
   },
   {
     category: "Ice Cream",
@@ -74,5 +78,9 @@ export const categories = [
   {
     category: "Salad",
     icon: salad,
-  }
+  },
+  {
+    category: "Beverage",
+    icon: beverages,
+  },
 ];

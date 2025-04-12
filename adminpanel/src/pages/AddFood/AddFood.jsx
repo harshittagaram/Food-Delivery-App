@@ -3,6 +3,7 @@ import { assets } from '../../assets/assets';
 import axios from 'axios';
 import { addFood } from '../../services/foodService';
 import { toast } from 'react-toastify';
+import "./AddFood.css";
 
 
 
@@ -41,17 +42,18 @@ const AddFood = () => {
 
   
   return (
-    <div className="mx-2 mt-4">
-      <div className="row p-1">
-        <div className="card col-md-4 col-lg-4">
+    <div className="add-food-container">
+      <div className="row justify-content-center">
+        <div className="card food-form-card col-md-6 col-lg-5">
           <form className="card-body" onSubmit={onSubmitHandler}>
-            <h2 className=" mb-4"> Add Food </h2>
-            <div className="mb-3">
-              <label htmlFor="image" className="form-label">
+            <h2 className="form-title">Add New Food</h2>
+
+            <div className="form-group text-center mb-4">
+              <label htmlFor="image" className="image-upload-label">
                 <img
                   src={image ? URL.createObjectURL(image) : assets.upload}
-                  alt=""
-                  width={70}
+                  alt="Upload Preview"
+                  className="image-preview"
                 />
               </label>
               <input
@@ -62,7 +64,8 @@ const AddFood = () => {
                 onChange={(e) => setImage(e.target.files[0])}
               />
             </div>
-            <div className="mb-3">
+
+            <div className="form-group mb-3">
               <label htmlFor="name" className="form-label">
                 Name
               </label>
@@ -77,7 +80,8 @@ const AddFood = () => {
                 placeholder="Chicken Biryani"
               />
             </div>
-            <div className="mb-3">
+
+            <div className="form-group mb-3">
               <label htmlFor="description" className="form-label">
                 Description
               </label>
@@ -92,7 +96,8 @@ const AddFood = () => {
                 placeholder="Enter description here..."
               ></textarea>
             </div>
-            <div className="mb-3">
+
+            <div className="form-group mb-3">
               <label htmlFor="category" className="form-label">
                 Category
               </label>
@@ -103,16 +108,19 @@ const AddFood = () => {
                 onChange={onChangeHandler}
                 value={data.category}
               >
+                <option value="">Select category</option>
                 <option value="Biryani">Biryani</option>
-                <option value="Cake">Cake</option>
+                <option value="Dessert">Dessert</option>
                 <option value="Burger">Burger</option>
                 <option value="Pizza">Pizza</option>
                 <option value="Rolls">Rolls</option>
                 <option value="Salad">Salad</option>
                 <option value="Ice Cream">Ice Cream</option>
+                <option value="Beverage">Beverage</option>
               </select>
             </div>
-            <div className="mb-3">
+
+            <div className="form-group mb-4">
               <label htmlFor="price" className="form-label">
                 Price
               </label>
@@ -127,8 +135,9 @@ const AddFood = () => {
                 placeholder="₹200"
               />
             </div>
+
             <div className="d-grid">
-              <button type="submit" className="btn btn-primary btn-sm">
+              <button type="submit" className="btn btn-success">
                 Save
               </button>
             </div>
@@ -137,6 +146,7 @@ const AddFood = () => {
       </div>
     </div>
   );
+
 }
 
 export default AddFood

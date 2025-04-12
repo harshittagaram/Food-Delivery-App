@@ -36,9 +36,10 @@ const ListFoods = () => {
     fetchList();
   },[])
   return (
-    <div className="py-5 row justify-content-center">
-      <div className="col-11 card">
-        <table className='table'>
+    <div className="food-list-container">
+      <div className="food-list-card">
+        <h2 className="food-list-title">Food Items</h2>
+        <table className="custom-table">
           <thead>
             <tr>
               <th>Image</th>
@@ -49,28 +50,32 @@ const ListFoods = () => {
             </tr>
           </thead>
           <tbody>
-            {
-              list.map((item,index)=>{
-                return (
-                  <tr key={index}>
-                    <td>
-                      <img src={item.imageUrl} alt="" height={48}  width={48}/>
-                    </td>
-                    <td>{item.name}</td>
-                    <td>{item.category}</td>
-                    <td>&#8377;{item.price}.00</td>
-                    <td className='text-danger'>
-                      <i className='bi bi-x-circle-fill' onClick={()=> removeFood(item.id)}></i>
-                    </td>
-                  </tr>
-                )
-              })
-            }
+            {list.map((item, index) => (
+              <tr key={index}>
+                <td>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className="food-img"
+                  />
+                </td>
+                <td>{item.name}</td>
+                <td>{item.category}</td>
+                <td>&#8377;{item.price}.00</td>
+                <td>
+                  <i
+                    className="bi bi-trash delete-icon"
+                    onClick={() => removeFood(item.id)}
+                  ></i>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
     </div>
   );
+
 }
 
 export default ListFoods

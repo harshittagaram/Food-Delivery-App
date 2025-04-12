@@ -1,0 +1,27 @@
+.navbar {
+  transition: all 0.3s ease;
+  z-index: 1040;
+}
+
+#sidebarToggle {
+  transition: background-color 0.3s ease;
+}
+
+#sidebarToggle:hover {
+  background-color: #e9f2ff;
+  color: #0056b3;
+  border-color: #bcdfff;
+}
+
+.navbar .btn-outline-primary {
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.navbar i {
+  transition: transform 0.3s ease;
+}
+
+.navbar i:hover {
+  transform: scale(1.1);
+}

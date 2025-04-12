@@ -1,0 +1,11 @@
+.header{
+    padding: 5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    color: white;
+    background-image: url("../../assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

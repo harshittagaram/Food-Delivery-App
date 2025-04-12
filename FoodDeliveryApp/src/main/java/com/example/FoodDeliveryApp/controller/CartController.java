@@ -45,7 +45,7 @@ public class CartController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"FoodId not found");
         }
         return cartService.removeFromCart(request);
-        
+
     }
 
 }

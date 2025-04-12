@@ -1,0 +1,59 @@
+.add-food-container {
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.food-form-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.food-form-card:hover {
+  transform: translateY(-3px);
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.image-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 2px solid #ddd;
+}
+
+.image-preview:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+.image-upload-label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+button.btn-success {
+  background-color: #28a745;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-success:hover {
+  background-color: #218838;
+}
