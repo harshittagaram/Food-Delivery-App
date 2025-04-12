@@ -2,7 +2,7 @@
 
 ## Description
 
-The **Food Delivery App** is a platform designed to provide an efficient and user-friendly experience for ordering food online. This application allows users to browse through a variety of food items, place orders, track their deliveries, and make secure payments. The backend is built using **Spring Boot**, and **AWS S3** is used for managing and uploading images (such as food item images). The app is designed to scale easily, providing a smooth experience for both customers and food delivery staff.
+The **Food Delivery App** is designed to provide an efficient and user-friendly experience for ordering food online. This application allows users to browse through a variety of food items, place orders, track their deliveries, and make payments via Razorpay(test mode). The backend is built using **Spring Boot**, and **AWS S3** is used for managing and uploading images. The app provides a smooth experience for both customers and food delivery staff.
 
 ### Key Features:
 - **User Registration and Login**: Users can create an account and log in to place orders.
@@ -13,31 +13,11 @@ The **Food Delivery App** is a platform designed to provide an efficient and use
 - **Admin Panel**: Admins can manage food items, monitor orders, and track deliveries.
 
 ## Technologies Used:
-- **Backend**: Spring Boot (Java)
+- **Backend**: Spring Boot 
 - **File Uploads**: AWS S3
-- **Database**: MySQL (or your preferred database)
+- **Database**: MongoDB 
 - **Security**: JWT Authentication for secure user login
-- **Payment Integration**: Stripe (or any other payment gateway)
-- **Frontend**: ReactJS (or another framework/library for the frontend)
-- **Deployment**: AWS for hosting the backend and frontend
+- **Payment Integration**: Razorpay 
+- **Frontend**: ReactJS
+- **Deployment**: AWS for storing the image files
 
-## Table of Contents
-- [Description](#description)
-- [Technologies Used](#technologies-used)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## Setup Instructions
-
-To set up the project locally, follow these steps:
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/food-delivery-app.git
-cd food-delivery-app
