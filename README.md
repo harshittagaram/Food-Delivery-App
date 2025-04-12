@@ -1,3 +1,7 @@
+![Screenshot 2025-04-12 151000](https://github.com/user-attachments/assets/eb721065-2727-4964-898f-a60be39b0ef5)
+![Screenshot 2025-04-12 151031](https://github.com/user-attachments/assets/2d31e5b2-a213-41b0-9e2f-944ab5230ed7)
+![Screenshot 2025-04-12 151212](https://github.com/user-attachments/assets/b86cc767-e025-4ed4-9783-369d1c2586e7)
+
 # Food Delivery App
 
 ## Description
